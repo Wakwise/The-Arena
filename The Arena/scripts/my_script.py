@@ -35,7 +35,7 @@ def the_game():
     
     Returns
     -------
-    Nothing but fun!
+    A lot of printed statements.
     """
     
     # Create the player class
@@ -332,7 +332,7 @@ def the_game():
                         def_mult = stat_check(player, 'def_mult')
                         dmg = dmg * def_mult
                         
-                    say(player.name+' takes '+str(dmg)+' damage!', False)
+                    say(player.name+' takes '+str(round(dmg, 1))+' damage!', False)
                     player_hp = player_hp - dmg
                     
                 elif not hit:
@@ -394,7 +394,7 @@ def the_game():
                         def_mult = stat_check(zombie, 'def_mult')
                         dmg = dmg * def_mult
                         
-                    say(zombie.name+' takes '+str(dmg)+' damage!', False)
+                    say(zombie.name+' takes '+str(round(dmg, 1))+' damage!', False)
                     zombie_hp = zombie_hp - dmg
                     
                 elif not hit:
@@ -456,7 +456,7 @@ def the_game():
                         def_mult = stat_check(player, 'def_mult')
                         dmg = dmg * def_mult
                         
-                    say(player.name+' takes '+str(dmg)+' damage!', False)
+                    say(player.name+' takes '+str(round(dmg, 1))+' damage!', False)
                     player_hp = player_hp - dmg
                     
                 elif not hit:

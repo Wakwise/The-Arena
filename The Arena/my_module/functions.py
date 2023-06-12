@@ -141,12 +141,12 @@ def bar(rem, max_val, att="Health"):
     
     if frac <= 2:
         
-        state = " LOW " + att.upper() + "!: " + str(rem) + " / " + str(max_val)
+        state = " LOW " + att.upper() + "!: " + str(round(rem, 1)) + " / " + str(max_val)
         say(state, sleep=0.02)
         
     else:
         
-        state = " " + att + ": " + str(rem) + " / " + str(max_val)
+        state = " " + att + ": " + str(round(rem, 1)) + " / " + str(max_val)
         say(state, sleep=0.02)
    
 

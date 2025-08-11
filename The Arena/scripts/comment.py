@@ -54,6 +54,8 @@ def com_phrase(att, phrases):
     
 def comment(strng, vital, aglty, intel, lucky):
     
+    clear_output()
+
     say("Right, here's what I've gathered about you and your abilities:\n", False)
     
     # Strength

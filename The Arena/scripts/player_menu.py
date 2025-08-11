@@ -30,10 +30,14 @@ def player_menu(player_object, hp, hp_max, ap, ap_max):
     
     # Check AP costs
     mult = stat_check(player_object, 'ap_cost_mult')
-    ap_cost = {'strong_attack' : 40*mult,
-               'medium_attack' : 25*mult,
-               'weak_attack' : 5*mult,
-               'defend' : 5*mult,
+    weakAtk = 5*mult
+    medAtk = 25*mult
+    strAtk = 40*mult
+    defCost = 5*mult
+    ap_cost = {'strong_attack' : strAtk,
+               'medium_attack' : medAtk,
+               'weak_attack' : weakAtk,
+               'defend' : defCost,
                'rest' : 0}
     
     complete = False
@@ -44,6 +48,7 @@ def player_menu(player_object, hp, hp_max, ap, ap_max):
         back_condition = False  
         valid_action = False 
         
+        print('Defend cost: ' + str(round(defCost,1))); time.sleep(0.01)
         print('----------   ----------   --------'); time.sleep(0.02)
         print('| ATTACK |   | DEFEND |   | REST |'); time.sleep(0.02)
         print('----------   ----------   --------'); time.sleep(0.02)
@@ -66,6 +71,8 @@ def player_menu(player_object, hp, hp_max, ap, ap_max):
 
             valid_attack = False
             
+            print('AP Costs:'); time.sleep(0.01)
+            print('Weak = ' + str(round(weakAtk, 1)) +'  Medium = ' + str(round(medAtk, 1)) + '  Strong = ' + str(round(strAtk, 1))); time.sleep(0.01)
             print('--------   ----------   ----------'); time.sleep(0.02)
             print('| WEAK |   | MEDIUM |   | STRONG |'); time.sleep(0.02)
             print('--------   ----------   ----------'); time.sleep(0.02)

@@ -73,8 +73,8 @@ class Giant():
         self.str = 8
         self.vit = 10
         self.agi = 1
-        self.int = 3
-        self.luk = 5
+        self.int = 2
+        self.luk = 2
         
         self.phrases = ("Brr.",
                         "Guh.",
@@ -104,26 +104,6 @@ class Antihero():
                         "Grr.",
                         "Ha!")
 
-class Buddy():
-    "A considerably test enemy."
-    
-    noise = "Lala!"
-    
-    def __init__(self):
-        
-        self.name = 'Buddy'
-        
-        self.str = 10
-        self.vit = 10
-        self.agi = 10
-        self.int = 10
-        self.luk = 10
-        
-        self.phrases = ("I remain! As a PERFORMANCE ARTIST!",
-                        "Any scraps for me?",
-                        "Oh lala dog",
-                        "ERIN E-E-ERIN ERIN",
-                        "OOH ONION RING")
 
 class Abilities():
     "A list of available abilities. Unused."
